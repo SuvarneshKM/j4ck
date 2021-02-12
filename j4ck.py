@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect	
 
 
 app = Flask(__name__)
@@ -14,7 +14,7 @@ def index():
 
 def user(name):
 	return render_template("user.html", name=name)
-
+	
 
 @app.errorhandler(404)
 
